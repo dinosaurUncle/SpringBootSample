@@ -41,7 +41,8 @@ public class BookRepositoryTest {
 		repository.save(book);
 		
 		List<Book> books = null;
-		books = repository.findByNameLike("book-spring-boot");
+		//books = repository.findByNameLike("book-spring-boot");
+		books = repository.findByNameLike("book%");
 		assertThat(books).isNotEmpty();
 		
 		books = repository.findByNameLike("book");
